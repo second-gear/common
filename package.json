@@ -1,6 +1,6 @@
 {
   "name": "@second-gear/common",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "repository": {
@@ -13,14 +13,20 @@
   },
   "homepage": "https://github.com/second-gear/common#readme",
   "scripts": {
-    "build": "rimraf ./dist && tsc"
+    "build": "rimraf ./dist && rollup -c rollup.config.ts"
   },
   "dependencies": {
-    "yup": "^0.32.9"
+    "yup": "^1.0.0-alpha.2"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-replace": "^3.0.0",
     "@types/yup": "^0.29.11",
     "rimraf": "^3.0.2",
+    "rollup": "^2.55.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.2.4"
   },
   "description": "Package used for validation with yup in my airbnb monorepo",
